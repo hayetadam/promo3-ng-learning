@@ -9,21 +9,29 @@
 <input type="number" [(ngModel)]="a">
 <input type="number" [(ngModel)]="b"> = {{a+b}}
 
-<form method="" action="">
-    <label for="nom">Votre nom:</label>
-    <input id="nom" name="nom" type="text" />
+<p>
+    <label>Nom :</label>
+    <input type="text" [(ngModel)]="personne.nom">
+</p>
+<p>
+    <label>Prénom :</label>
+    <input type="text" [(ngModel)]="personne.prenom">
+</p>
+<p>
+    <label>Age :</label>
+    <input type="number" [(ngModel)]="personne.age">
+</p>
+<label>J'ai un chien</label>
+<input type="checkbox" [(ngModel)]="chienForm">
 
-    <label for="prenom">Votre prenom :</label>
-    <input id="prenom" name="prenom" type="text" />
-    <br>
-
-    <input type="checkbox" name="chien" id="chien" />
-    <label for="chien">j'ai un chien</label>
-    <br>
-    <label for="nomchien">nom de chien:</label>
-    <input id="nomchien" name="nomchien" type="text" />
-    <label for="race">race de chien:</label>
-    <input id="race" name="race" type="text" />
-
-    <input type="submit" value="Valider" />
-</form>
+<section [hidden]="!chienForm">
+    <p>
+        <label>Nom du Chien :</label>
+        <input type="text" [(ngModel)]="personne.chien.nom">
+    </p>
+    <p>
+        <label>Race du Chien :</label>
+        <input type="text" [(ngModel)]="personne.chien.race">
+    </p>
+</section>
+<button (click)="afficher()">Afficher</button>
