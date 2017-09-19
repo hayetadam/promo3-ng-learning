@@ -1,0 +1,29 @@
+<h1 (click)="methode()">{{title}}</h1>
+<!--<p [class]="title"></p>!-->
+<input type="text" [(ngModel)]="title" [hidden]="true">
+<input type="text" [(ngModel)]="title" [hidden]="inputShown">
+
+<button (click)="inputShown = !inputShown">Toggel</button>
+<button (click)="toggelInput()">Toggel</button>
+<input type="checkbox" [(ngModel)]="inputShown">
+<input type="number" [(ngModel)]="a">
+<input type="number" [(ngModel)]="b"> = {{a+b}}
+
+<form method="" action="">
+    <label for="nom">Votre nom:</label>
+    <input id="nom" name="nom" type="text" />
+
+    <label for="prenom">Votre prenom :</label>
+    <input id="prenom" name="prenom" type="text" />
+    <br>
+
+    <input type="checkbox" name="chien" id="chien" />
+    <label for="chien">j'ai un chien</label>
+    <br>
+    <label for="nomchien">nom de chien:</label>
+    <input id="nomchien" name="nomchien" type="text" />
+    <label for="race">race de chien:</label>
+    <input id="race" name="race" type="text" />
+
+    <input type="submit" value="Valider" />
+</form>
