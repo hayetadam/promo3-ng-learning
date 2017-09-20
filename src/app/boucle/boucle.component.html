@@ -1,3 +1,5 @@
-<p>
-  boucle works!
-</p>
+<ng-container *ngFor="let item of tableau; index as clef, even as pair">
+    <p *ngIf=" pair ">
+        {{clef}} {{item}}
+    </p>
+</ng-container>
