@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { TemplateComponent } from './template/template.component';
 import { BoucleComponent } from './boucle/boucle.component';
 import { TodoComponent } from './todo/todo.component';
 import { TodoService } from './shared/todo.service';
-import { TodoSecondComponent } from './todo-second/todo-second.component';
+import { TodoAjaxService } from './shared/todo-ajax.service';
 
 @NgModule({
   declarations: [
@@ -15,11 +16,12 @@ import { TodoSecondComponent } from './todo-second/todo-second.component';
     TemplateComponent,
     BoucleComponent,
     TodoComponent,
-    TodoSecondComponent
+    
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   /*
   Pour pouvoir être injecté, un service a besoin d'être
@@ -33,7 +35,8 @@ import { TodoSecondComponent } from './todo-second/todo-second.component';
   à travers toute notre application.
   */
   providers: [
-    TodoService
+    TodoService,
+    TodoAjaxService
   ],
   bootstrap: [AppComponent]
 })

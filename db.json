@@ -25,6 +25,21 @@
       "nom": "rex",
       "race": "todo",
       "id": 6
+    },
+    {
+      "nom": "rex",
+      "race": "todo",
+      "id": 7
+    }
+  ],
+  "todo": [
+    {
+      "message": "toto",
+      "id": 4
+    },
+    {
+      "message": "lala",
+      "id": 5
     }
   ]
 }
